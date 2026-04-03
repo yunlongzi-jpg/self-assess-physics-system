@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honors General Physics I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #074975;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .button-container {
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: center; /* 水平居中 */
+            margin-bottom: 20px; /* 设置按钮容器下边距 */
+        }
+
+        /* 样式化按钮 */
+        .styled-button {
+            width: 200px; /* 设置按钮宽度 */
+            height: 100px; /* 设置按钮高度 */
+            padding: 10px 20px; /* 设置按钮内边距 */
+            border-radius: 8px; /* 设置按钮圆角 */
+            font-size: 16px; /* 设置按钮文字大小 */
+            background-color: #074975; /* 设置按钮背景颜色 */
+            color: white; /* 设置按钮文字颜色 */
+            border: none; /* 去除按钮边框 */
+            cursor: pointer; /* 设置鼠标悬停样式 */
+
+        }
+    </style>
+
+</head>
+<body>
+<header>
+    <h1 style="color: white">Honors General Physics I</h1>
+</header>
+<main>
+    <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Physics" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+    <h2>About the Course</h2>
+    <p>
+        Honors General Physics I is an introductory course designed to provide students with a solid foundation in
+        classical mechanics.
+        Topics covered in this course include kinematics, dynamics, Newton's laws of motion, work, energy, momentum,
+        rotational motion,
+        oscillations, and gravitation.
+        <br>
+        Emphasis is placed on problem-solving skills and understanding the fundamental principles underlying
+        physical phenomena.
+    </p>
+    <img src="{{ url_for('static', filename='imgs/Isaac Newton.jpeg') }}" alt="Physics"
+         style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand and apply the basic principles of classical mechanics.</li>
+        <li>Develop problem-solving skills in physics.</li>
+        <li>Apply mathematical concepts to analyze physical phenomena.</li>
+        <li>Develop critical thinking and analytical skills.</li>
+    </ul>
+    <h2>Prerequisites</h2>
+    <p>
+        Prerequisites for this course may include a strong background in algebra, trigonometry, and calculus.
+        Students are expected to have a basic understanding of fundamental concepts in mathematics and physics.
+    </p>
+    <h2>Instructor</h2>
+    <p>
+        The course is taught by Professor Yunlong ZI, who holds a [Degree] in [Field of Physics].
+        Professor [Instructor Name] has [X] years of experience teaching physics and is passionate about
+        helping students understand and appreciate the wonders of physics.
+    </p>
+    <h2>Course Schedule</h2>
+    <p>
+        The course meets [X] times per week for [Y] minutes each session.
+        Please refer to the official course syllabus for detailed information about class schedule, assignments,
+        exams, and grading policies.
+    </p>
+    <div class="button-container">
+        <button class="styled-button">Test</button>
+
+        <script>
+            // 选取具有class样式的按钮
+            const button = document.querySelector('.styled-button');
+
+            // 添加按钮点击事件监听器
+            button.addEventListener('click', function () {
+                // 页面跳转到指定URL
+                window.location.href = '/login';
+            });
+        </script>
+</main>
+</body>
+</html>

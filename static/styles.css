@@ -1,0 +1,141 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+    margin: 0;
+}
+
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.quiz-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px; /* Increased width for a wider layout */
+    width: 90%;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.question-container {
+    margin-bottom: 25px;
+}
+
+.question-text {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    margin-bottom: 20px;
+}
+
+.option {
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #0288d1;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+    width: 100%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.option:hover {
+    background-color: #b3e5fc;
+    border-color: #0277bd;
+}
+
+.option.selected {
+    background-color: #81d4fa;
+    border-color: #0288d1;
+}
+
+.input {
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #0288d1;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 20px;
+    width: 100%;
+    transition: background-color 0.3s, border-color 0.3s;
+    outline: none;
+}
+
+.input:hover {
+    background-color: #b3e5fc;
+    border-color: #0277bd;
+}
+
+.input:focus {
+    background-color: #81d4fa;
+    border-color: #0288d1;
+}
+
+button {
+    padding: 20px 40px;
+    background-color: #074975;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0288d1;
+}
+
+#accuracy-report {
+    margin-top: 30px;
+}
+
+#accuracy-report table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#accuracy-report th, #accuracy-report td {
+    border: 1px solid #074975;
+    padding: 10px;
+    text-align: center;
+}
+
+#accuracy-report th {
+    background-color: #074975;
+    color: #ffffff;
+}
+
+#accuracy-report td {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#results-section {
+    max-height: 80vh;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}

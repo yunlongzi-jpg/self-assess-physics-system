@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="quiz-container">
+    <div class="quiz-content">
+        <h1>Physics Quiz</h1>
+        <div id="accuracy-report">
+            <table>
+                <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Easy Accuracy</th>
+                    <th>Medium Accuracy</th>
+                    <th>Hard Accuracy</th>
+                    <th>Final Accuracy</th>
+                </tr>
+                </thead>
+                <tbody id="report-body">
+                <!-- Table content will be generated dynamically -->
+                </tbody>
+            </table>
+        </div>
+        <div class="question-container" id="question-container">
+            <h2 class="question-text" id="question-text"></h2>
+            <div id="question-img"></div>
+            <div class="options-container" id="options-container"></div>
+            <div class="inputs-container" id="inputs-container"></div>
+        </div>
+        <button id="submit-button">Next Question</button>
+
+        <!-- 新增的结果部分 -->
+        <div id="results-section" style="display: none;">
+            <h2>Quiz Results</h2>
+            <div id="explanation-container">
+                <!-- 解析内容将在这里动态生成 -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

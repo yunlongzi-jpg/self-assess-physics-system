@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <div class="form-toggle">
+            <button id="loginBtn" class="toggle-btn active" onclick="toggleForm('login')">Login</button>
+            <button id="registerBtn" class="toggle-btn" onclick="toggleForm('register')">Register</button>
+        </div>
+        <div class="form-content" id="loginForm" style="display: block;">
+            <h2 class="form-title">Login</h2>
+            <form id="loginFormElement" onsubmit="handleLogin(event)">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+                <p></p>
+                <button type="button" onclick="navigateTo('web.html')">Back</button>
+            </form>
+        </div>
+        <div class="form-content" id="registerForm" style="display: none;">
+            <h2 class="form-title">Register</h2>
+            <form id="registerFormElement" onsubmit="handleRegister(event)">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" required>
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" required>
+                <button type="submit">Register</button>
+                <p></p>
+                <button type="button" onclick="navigateTo('web.html')">Back</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+<script>
+    // JavaScript code to handle form switching and redirection
+    function toggleForm(form) {
+        document.getElementById("loginForm").style.display = form === "login" ? "block" : "none";
+        document.getElementById("registerForm").style.display = form === "register" ? "block" : "none";
+
+        document.getElementById("loginBtn").classList.toggle("active", form === "login");
+        document.getElementById("registerBtn").classList.toggle("active", form === "register");
+    }
+
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+
+    async function handleLogin(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("loginEmail").value;
+        const password = document.getElementById("loginPassword").value;
+
+        // Mock validation, replace this with actual validation logic
+        if (email === "1@example.com" && password === "1@example.com") {
+            // Redirect to another page after successful login
+            navigateTo("/quiz");
+        } else {
+            alert("Invalid email or password");
+        }
+    }
+
+    function handleRegister(event) {
+        event.preventDefault();
+        // Implement registration logic here
+    }
+</script>
+</body>
+</html>
